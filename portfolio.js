@@ -135,23 +135,35 @@ linkwork.forEach(l=> l.addEventListener('click', activework))
 document.addEventListener("click", (e) => {
     if(e.target.classList.contains("work-button")) {
         toggleportfoliopopup();
-        portfolioitemDetails(e.target.parentElement);
+        portfolioItemDetails(e.target.parentElement);
     }
 })
 
 function toggleportfoliopopup() {
     document.querySelector(".portfolio-popup").classList.toggle("open");
+
 }
 
 document.querySelector(".portfolio-popup-close").addEventListener("click", toggleportfoliopopup)
 
 
-function portfolioitemDetails(portfolioitem){
-    document.querySelector(".pp-thumbnail img").src = portfolioitem.querySelector(".work-img").src;
-    document.querySelector(".portfolio-popup-subtitle span").innerHTML = portfolioitem.queryselector(".work-title").innerHTML;
-    document.querySelector(".portfolio-popup-body").innerHTML = portfolioitem.queryselector(".portfolio-item-details").innerHTML;
-}
-       
+  function portfolioItemDetails (portfolioItem){
+     document.querySelector(".pp-thumbnail img").src = portfolioItem.querySelector(".work-img").src;
+
+
+
+    //   document.querySelector(".portfolio-popup-subtitle span").innerHTML = portfolioItem.queryselector(".work-title").innerHTML;
+
+
+     document.querySelector(".portfolio-popup-body").innerHTML = portfolioItem.querySelector
+      (".portfolio-item-details").innerHTML;
+     
+ }
+
+ 
+  
+
+
 
 
 

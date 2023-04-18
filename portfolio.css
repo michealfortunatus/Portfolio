@@ -758,6 +758,7 @@ input{
     opacity: 1;
     visibility: visible;
 }
+
 .portfolio-popup-inner{
     background-color: var(--box-color);
     width: 900px;
@@ -789,7 +790,7 @@ input{
     margin-bottom: var(--mb-0-25);
 
 }
-.portfolio-title{
+.details-title{
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-1);
