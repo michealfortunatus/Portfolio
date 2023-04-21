@@ -317,7 +317,8 @@ input{
     align-items: center;
 }
 .home-social{
-    position: absolute;
+    position:absolute; 
+    z-index: 1; 
     top: 1.8rem;
     left: 0;
     display: flex;
@@ -354,15 +355,15 @@ input{
 }
 .banner-animation{
     animation:waveAnim 2s linear infinite alternate;
-}
-@keyframes waveAnim {
+} 
+ @keyframes waveAnim {
     0% {
         transform: translate(0,0) rotate(0);
     }
     100%{
         transform: translate(2px, 2px) rotate(1deg);
     }
-}
+} 
 .my-info{
     display: flex;
     column-gap: 1.8rem;
@@ -706,7 +707,14 @@ input{
 .portfolio-item-details{
     display: none;
 }
+.portfolio-item-details1{
+    display: none;
+}
 .work-img{
+    border-radius: .5rem;
+    margin-bottom: var(--mb-1);
+}
+.work-img1{
     border-radius: .5rem;
     margin-bottom: var(--mb-1);
 }
@@ -1455,6 +1463,7 @@ textarea.input{
 }
     
 @media screen and (max-width:576px){
+    
     .nav-logo{
         display: none;
     }
@@ -1505,10 +1514,11 @@ textarea.input{
     
     .home-info{
         position: relative;
-        top:-50px;
+        top:-70px;
         
     }
     .home-social{
+       
         left: initial;
         right: -1rem;
         flex-direction: column;
