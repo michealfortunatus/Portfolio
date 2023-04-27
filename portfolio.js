@@ -147,93 +147,50 @@ function toggleportfoliopopup() {
 document.querySelector(".portfolio-popup-close").addEventListener("click", toggleportfoliopopup)
 
 
-//   function portfolioItemDetails (portfolioItem){
-//      document.querySelector(".pp-thumbnail img").src = portfolioItem.querySelector(".work-img").src;
+    // function portfolioItemDetails (portfolioItem){
+    //    document.querySelector(".pp-thumbnail img").src = portfolioItem.querySelector(".work-img").src;
 
     
 //       document.querySelector(".portfolio-popup-body").innerHTML = portfolioItem.querySelector
-//       (".portfolio-item-details").innerHTML;
+//        (".portfolio-item-details").innerHTML;
      
-//  }
+//    }
 
-// Select the element with class "portfolio-popup-body"
-// var popupBodyElement = document.querySelector(".portfolio-popup-body");
+ function portfolioItemDetails(portfolioItem) {
+    
+    const workImg = portfolioItem.querySelector(".work-img");
+    const itemDetails = portfolioItem.querySelector(".portfolio-item-details");
+  
+    
+    if (workImg) {
+      const thumbnailImg = document.querySelector(".pp-thumbnail img");
+      thumbnailImg.src  = workImg.src;
+        
+      }
+  
+    if (itemDetails) {
+      const popupBody = document.querySelector(".portfolio-popup-body");
+      popupBody.innerHTML = itemDetails.innerHTML;
+    }
+  }
+  
+  const portfolioItems = document.querySelectorAll(".portfolio-item-details");
+  portfolioItems.forEach((portfolioItem) => {
+    portfolioItem.addEventListener("click", () => {
+      portfolioItemDetails(portfolioItem);
+    });
+  });
 
-// // Select all elements with class "portfolio-item-details"
-// var detailsElements = document.querySelectorAll(".portfolio-item-details");
-
-// // Loop through the selected elements and concatenate their innerHTML property values
-// var contents = "";
-// for (var i = 0; i < detailsElements.length; i++) {
-//   contents += detailsElements[i].innerHTML;
-// }
-
-// // Set the innerHTML property of the "portfolio-popup-body" element to the concatenated contents
-// popupBodyElement.innerHTML = contents;
+  const portfolioItemsImg = document.querySelectorAll(".work-img");
+  portfolioItemsImg.forEach((portfolioItem) => {
+    portfolioItem.addEventListener("click", () => {
+      portfolioItemDetails(portfolioItem);
+    });
+  });
 
 
-
-// // Select the element with class "portfolio-popup-body"
-// var popupBodyElement = document.querySelector(".pp-thumbnail img").src;
-
-// // Select all elements with class "portfolio-item-details"
-// var detailsElements = document.querySelectorAll(".work-img").src;
-
-// // Loop through the selected elements and concatenate their innerHTML property values
-// var contents = "";
-// for (var i = 0; i < detailsElements.length; i++) {
-//   contents += detailsElements[i].innerHTML;
-// }
-
-// // Set the innerHTML property of the "portfolio-popup-body" element to the concatenated contents
-// popupBodyElement.innerHTML = contents;
-
-
-//  // Select all elements with class "portfolio-popup-body"
-// var popupBodyElements = document.querySelectorAll(".portfolio-popup-body");
-
-// // Select all elements with class "portfolio-item-details"
-// var detailsElements = document.querySelectorAll(".portfolio-item-details");
-
-// // Loop through the selected elements and set the innerHTML property individually
-// for (var i = 0; i < popupBodyElements.length; i++) {
-//   // Set the innerHTML property of the current popup body element to the innerHTML property of the corresponding details element
-//   popupBodyElements[i].innerHTML = detailsElements[i].innerHTML;
-// }
 
   
-
-// Select all elements with class "portfolio-popup-body"
-var popupBodyElements = document.querySelectorAll(".portfolio-popup-body");
-
-// Select all elements with class "portfolio-item-details"
-var detailsElements = document.querySelectorAll(".portfolio-item-details");
-
-// Log the innerHTML property of each details element to the console
-// for (var i = 0; i < detailsElements.length; i++) {
-//   console.log(detailsElements[i].innerHTML);
-// }
-
-// Loop through the selected elements and set the innerHTML property individually
-for (var i = 0; i < detailsElements.length; ) {
-  // Set the innerHTML property of the current popup body element to the innerHTML property of the corresponding details element
-  popupBodyElements[i].innerHTML = detailsElements[i].innerHTML;
-}
-
-
-// Select all elements with class "pp-thumbnail"
-var thumbnailElements = document.querySelectorAll(".pp-thumbnail img").src;
-
-// Select all elements with class "work-im
-var workImgElements = document.querySelectorAll(".work-img").src;
-
-// Loop through the selected elements and set the src attribute individually
-for (var i = 0; i < workImgElements.length; i++) {
-  // Set the src attribute of the current work-img element to the src attribute of the corresponding thumbnail element
-  thumbnailElements[i].src = workImgElements[i].src;
-}
-
-
 
 
 // ==========================================CONTACT INPUT ANIMATION=========================================
