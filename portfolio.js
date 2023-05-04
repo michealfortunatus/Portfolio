@@ -158,8 +158,13 @@ document.querySelector(".portfolio-popup-close").addEventListener("click", toggl
 
  function portfolioItemDetails(portfolioItem) {
     
-    const workImg = portfolioItem.querySelector(".work-img");
-    const itemDetails = portfolioItem.querySelector(".portfolio-item-details");
+     const workImg = portfolioItem.querySelector(".work-img");
+    // const workImg = portfolioItem.document.getElementById("work-img");
+
+     const itemDetails = portfolioItem.querySelector(".portfolio-item-details");
+    // const itemDetails = portfolioItem.document.getElementById("portfolio-item-details");
+    
+
   
     
     if (workImg) {
@@ -175,6 +180,8 @@ document.querySelector(".portfolio-popup-close").addEventListener("click", toggl
   }
   
   const portfolioItems = document.querySelectorAll(".portfolio-item-details");
+//   const portfolioItems = document.getElementById("portfolio-item-details");
+
   portfolioItems.forEach((portfolioItem) => {
     portfolioItem.addEventListener("click", () => {
       portfolioItemDetails(portfolioItem);
@@ -182,6 +189,8 @@ document.querySelector(".portfolio-popup-close").addEventListener("click", toggl
   });
 
   const portfolioItemsImg = document.querySelectorAll(".work-img");
+//   const portfolioItemsImg = document.getElementById("work-img");
+
   portfolioItemsImg.forEach((portfolioItem) => {
     portfolioItem.addEventListener("click", () => {
       portfolioItemDetails(portfolioItem);

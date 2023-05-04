@@ -708,17 +708,17 @@ input{
 .portfolio-item-details{
     display: none;
 }
- /* .portfolio-item-details1{
+  /* #portfolio-item-details1{
     display: none;
-}  */
+}   */
 .work-img{
     border-radius: .5rem;
     margin-bottom: var(--mb-1);
 }
- /* .work-img1{
+  /* #work-img{
     border-radius: .5rem;
     margin-bottom: var(--mb-1);
- }   */
+ }    */
 .work-title{
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
